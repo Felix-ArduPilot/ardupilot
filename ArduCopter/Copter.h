@@ -904,6 +904,7 @@ private:
 
     // tuning.cpp
     void tuning();
+    float tuning2();
 
     // UserCode.cpp
     void userhook_init();

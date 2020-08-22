@@ -145,7 +145,6 @@ float Copter::get_pilot_desired_rotor_speed() const
 // heli_update_rotor_speed_targets - reads pilot input and passes new rotor speed targets to heli motors object
 void Copter::heli_update_rotor_speed_targets()
 {
-
     static bool rotor_runup_complete_last = false;
 
     // get rotor control method
@@ -173,7 +172,7 @@ void Copter::heli_update_rotor_speed_targets()
 #if RPM_ENABLED == ENABLED
                 motors->set_rpm(rpm_sensor.get_rpm(0));
 #endif
-                motors->set_desired_rotor_speed(motors->get_rsc_setpoint());
+                motors->set_desired_rotor_speed(tuning2());
             }else{
                 motors->set_desired_rotor_speed(0.0f);
             }

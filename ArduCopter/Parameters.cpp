@@ -960,7 +960,17 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
     // @Path: ../libraries/AC_Autorotation/AC_Autorotation.cpp
     AP_SUBGROUPINFO(arot, "AROT_", 37, ParametersG2, AC_Autorotation),
 #endif
+// @Param: TUNE2_MIN
+// @DisplayName: Tuning2 minimum
+// @Description: Minimum value that the parameter currently being tuned with the transmitter's channel 6 knob will be set to
+// @User: Standard
+AP_GROUPINFO("TUNE2_MIN", 38, ParametersG2, tuning2_min, 0),
 
+// @Param: TUNE2_MAX
+// @DisplayName: Tuning2 maximum
+// @Description: Maximum value that the parameter currently being tuned with the transmitter's channel 6 knob will be set to
+// @User: Standard
+AP_GROUPINFO("TUNE2_MAX", 39, ParametersG2, tuning2_max, 0),
 
 
     AP_GROUPEND

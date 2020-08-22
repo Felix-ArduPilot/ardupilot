@@ -599,6 +599,8 @@ public:
 
     AP_Float tuning_min;
     AP_Float tuning_max;
+    AP_Float tuning2_min;
+    AP_Float tuning2_max;
 
 #if AC_OAPATHPLANNER_ENABLED == ENABLED
     // object avoidance path planning
